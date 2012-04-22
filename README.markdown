@@ -5,7 +5,7 @@ It can be very useful if you work with (d)ddd, cqrs, eventsourcing, commands and
 
 # Installation
 
-    $ npm install queue
+    $ npm install node-queue
 
 # Usage
 

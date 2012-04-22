@@ -11,7 +11,7 @@ It can be very useful if you work with (d)ddd, cqrs, eventsourcing, commands and
 
 ## Connecting to an in-memory queue
 
-	var queue = require('queue');
+	var queue = require('node-queue');
 
 	queue.connect(function(err, myQueue) {
         if(err) {
@@ -25,7 +25,7 @@ It can be very useful if you work with (d)ddd, cqrs, eventsourcing, commands and
 ## Connecting to any queue (mongodb in the example)
 Make shure you have installed the required driver, in this example run: 'npm install mongodb'.
 
-    var queue = require('queue');
+    var queue = require('node-queue');
 
     queue.connect(
         {

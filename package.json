@@ -1,6 +1,6 @@
 {
   "author": "adrai",
-  "name": "queue",
+  "name": "node-queue",
   "version": "0.0.1",
   "private": false,
   "main": "index.js",

@@ -123,7 +123,7 @@ describe('Queue implementation', function() {
 					expect(err).not.to.be.ok();
 					expect(items).to.be.an('array');
 					expect(items).to.have.length(1);
-					expect(items[0]).to.have.property('data', 'blablabla');
+					expect(items[0].data).to.have.property('data', 'blablabla');
 					done();
 				});
 
@@ -272,7 +272,7 @@ describe('Queue implementation', function() {
 						queue.getAll(function(err, items) {
 							expect(items).to.be.an('array');
 							expect(items).to.have.length(1);
-							expect(items[0]).to.have.property('workers', 1);
+							expect(items[0].data).to.have.property('workers', 1);
 							done();
 						});
 					});

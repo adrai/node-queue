@@ -82,6 +82,9 @@ Make shure you have installed the required driver, in this example run: 'npm ins
         }
 
         // items is an array of all what is in the queue
+        var firstItem = items[0];
+        console.log('the id: ' + firstItem.id);
+        console.log('the pushed data: ' + firstItem.data);
     });
 
 ## Obtain a new id

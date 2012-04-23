@@ -1,5 +1,7 @@
 # Introduction
 
+[![Build Status](https://secure.travis-ci.org/adrai/node-queue.png)](http://travis-ci.org/adrai/node-queue)
+
 Node-queue is a node.js module for multiple databases.
 It can be very useful if you work with (d)ddd, cqrs, eventsourcing, commands and events, etc.
 

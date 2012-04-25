@@ -1,6 +1,6 @@
 var expect = require('expect.js')
   , async = require('async')
-  , queue = require('../lib/databases/mongoDb');
+  , queue = require('../lib/databases/inMemory');
 
 function cleanQueue(done) {
     queue.getAll(function(err, results) {

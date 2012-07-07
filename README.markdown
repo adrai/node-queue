@@ -137,6 +137,7 @@ Currently these databases are supported:
 
 1. inMemory
 2. mongoDb ([node-mongodb-native] (https://github.com/mongodb/node-mongodb-native))
+3. couchDb ([cradle] (https://github.com/cloudhead/cradle))
 
 # License
 

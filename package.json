@@ -1,7 +1,7 @@
 {
   "author": "adrai",
   "name": "node-queue",
-  "version": "0.1.4",
+  "version": "0.2.0",
   "private": false,
   "main": "index.js",
   "engines": {
@@ -22,6 +22,8 @@
   "keywords"    : [
     "orm",
     "mongodb",
+    "couchdb",
+    "memory",
     "database",
     "cqrs",
     "eventsourcing",

@@ -1,7 +1,7 @@
 {
   "author": "adrai",
   "name": "node-queue",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "private": false,
   "main": "index.js",
   "engines": {
@@ -11,7 +11,7 @@
     "lib": "./lib"
   },
   "dependencies": {
-    "lodash": ">= 0.4.2"
+    "lodash": ">= 0.5.x"
   },
   "devDependencies": {
     "async": ">= 0.1.18",
@@ -39,6 +39,15 @@
     "type": "git",
     "url": "git@github.com:adrai/node-queue.git"
   },
+  "bugs": {
+    "url": "https://github.com/adrai/node-queue/issues"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://raw.github.com/adrai/node-queue/master/licence"
+    }
+  ],
   "scripts" : { 
     "test" : "mocha"
   } 

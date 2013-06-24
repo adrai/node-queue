@@ -138,10 +138,11 @@ Currently these databases are supported:
 1. inMemory
 2. mongoDb ([node-mongodb-native] (https://github.com/mongodb/node-mongodb-native))
 3. couchDb ([cradle] (https://github.com/cloudhead/cradle))
+4. tingoDb ([tingodb] (https://github.com/sergeyksv/tingodb))
 
 # License
 
-Copyright (c) 2012 Adriano Raiano
+Copyright (c) 2013 Adriano Raiano
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal

@@ -1,7 +1,7 @@
 {
   "author": "adrai",
   "name": "node-queue",
-  "version": "0.3.2",
+  "version": "0.4.0",
   "private": false,
   "main": "index.js",
   "engines": {
@@ -11,7 +11,8 @@
     "lib": "./lib"
   },
   "dependencies": {
-    "lodash": ">= 0.5.x"
+    "lodash": ">= 2.2.1",
+    "tolerance": ">= 1.0.0"
   },
   "devDependencies": {
     "async": ">= 0.1.18",
@@ -19,7 +20,7 @@
     "expect.js": ">= 0.1.2"
   },
   "description": "Node-queue is a node.js module for multiple databases. It can be very useful if you work with (d)ddd, cqrs, eventsourcing, commands and events, etc.",
-  "keywords"    : [
+  "keywords": [
     "orm",
     "mongodb",
     "couchdb",
@@ -48,7 +49,7 @@
       "url": "https://raw.github.com/adrai/node-queue/master/licence"
     }
   ],
-  "scripts" : { 
-    "test" : "mocha"
-  } 
+  "scripts": {
+    "test": "mocha"
+  }
 }

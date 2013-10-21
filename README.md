@@ -36,6 +36,7 @@ Make shure you have installed the required driver, in this example run: 'npm ins
             port: 27017,            // optional
             dbName: 'queuedb',      // optional
             collectionName: 'queue' // optional
+            timeout: 10000          // optional
         }, 
         function(err, myQueue) {
             if(err) {

@@ -24,7 +24,7 @@ describe('Queue', function() {
 
   });
 
-  describe('calling connect', function() {
+  describe('calling createQueue', function() {
 
     describe('without options', function() {
 
@@ -32,6 +32,20 @@ describe('Queue', function() {
 
         var q = queue.createQueue();
         expect(q).to.be.a('object');
+
+      });
+
+      describe('but with a callback', function() {
+
+        it('it should callback with queue object', function(done) {
+
+          queue.createQueue(function(err, q) {
+            expect(err).not.to.be.ok();
+            expect(q).to.be.a('object');
+            done();
+          });
+
+        });
 
       });
 

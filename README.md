@@ -1,6 +1,6 @@
 # Introduction
 
-[![Build Status](https://secure.travis-ci.org/adrai/node-queue.png)](http://travis-ci.org/adrai/node-queue)
+[![travis](https://img.shields.io/travis/adrai/node-queue.svg)](https://travis-ci.org/adrai/node-queue) [![npm](https://img.shields.io/npm/v/node-queue.svg)](https://npmjs.org/package/node-queue)
 
 Node-queue is a node.js module for multiple databases.
 It can be very useful if you work with (d)ddd, cqrs, eventsourcing, commands and events, etc.
@@ -15,7 +15,7 @@ It can be very useful if you work with (d)ddd, cqrs, eventsourcing, commands and
 
 	var queue = require('node-queue');
 
-	queue.connect(function(err, myQueue) {
+	queue.createQueue(function(err, myQueue) {
         if(err) {
             console.log('ohhh :-(');
             return;
@@ -29,7 +29,7 @@ Make shure you have installed the required driver, in this example run: 'npm ins
 
     var queue = require('node-queue');
 
-    queue.connect(
+    queue.createQueue(
         {
             type: 'mongoDb',
             host: 'localhost',      // optional
@@ -68,8 +68,8 @@ Make shure you have installed the required driver, in this example run: 'npm ins
 
 ## Check if is already queued
 
-    myQueue.isQueued('myId',  function(err) {
-        if(err) {
+    myQueue.isQueued('myId',  function(err, isQueued) {
+        if(isQueued) {
             console.log('Already queued!');
         } else {
             console.log('Not queued!');
@@ -99,6 +99,20 @@ Make shure you have installed the required driver, in this example run: 'npm ins
         }
 
         console.log('the new id is: ' + newId);
+    });
+
+## Catch connect ad disconnect events
+
+    var q = queue.createQueue({ type: 'mongodb' }, function(err, q) {
+        console.log('hello from callback');
+        // use queue here...
+    });
+    q.on('connect', function() {
+        console.log('hello from event');
+        // or here
+    });
+    q.on('disconnect', function() {
+        console.log('bye');
     });
 
 ## Decrement (can be very useful if you want to create a eventQueue for eventdenormalizers, cqrs, eventsourcing)
@@ -140,10 +154,33 @@ Currently these databases are supported:
 2. mongoDb ([node-mongodb-native] (https://github.com/mongodb/node-mongodb-native))
 3. couchDb ([cradle] (https://github.com/cloudhead/cradle))
 4. tingoDb ([tingodb] (https://github.com/sergeyksv/tingodb))
+5. redis ([redis] (https://github.com/mranney/node_redis))
+
+## own db implementation
+You can use your own db implementation by extending this...
+
+    var Queue = require('node-queue').Queue,
+    util = require('util'),
+        _ = require('lodash');
+
+    function MyDB(options) {
+      Queue.call(this, options);
+    }
+
+    util.inherits(MyDB, Queue);
+
+    _.extend(MyDB.prototype, {
+
+      ...
+
+    });
+
+    module.exports = MyDB;
+
 
 # License
 
-Copyright (c) 2013 Adriano Raiano
+Copyright (c) 2014 Adriano Raiano
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal

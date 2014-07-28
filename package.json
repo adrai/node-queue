@@ -22,7 +22,7 @@
     "hiredis": "^0.1.17",
     "mocha": ">= 1.0.1",
     "mongodb": ">= 0.0.1",
-    "redis": "^0.11.0",
+    "redis": ">= 0.10.1",
     "tingodb": ">= 0.0.1"
   },
   "description": "Node-queue is a node.js module for multiple databases. It can be very useful if you work with (d)ddd, cqrs, eventsourcing, commands and events, etc.",

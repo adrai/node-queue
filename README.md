@@ -146,6 +146,7 @@ Make shure you have installed the required driver, in this example run: 'npm ins
 
     });
 
+#[Release notes](https://github.com/adrai/node-queue/blob/master/releasenotes.md)
 
 # Database Support
 Currently these databases are supported:

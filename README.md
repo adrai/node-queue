@@ -151,10 +151,10 @@ Make shure you have installed the required driver, in this example run: 'npm ins
 # Database Support
 Currently these databases are supported:
 
-1. inMemory
-2. mongoDb ([node-mongodb-native] (https://github.com/mongodb/node-mongodb-native))
-3. couchDb ([cradle] (https://github.com/cloudhead/cradle))
-4. tingoDb ([tingodb] (https://github.com/sergeyksv/tingodb))
+1. inmemory
+2. mongodb ([node-mongodb-native] (https://github.com/mongodb/node-mongodb-native))
+3. couchdb ([cradle] (https://github.com/cloudhead/cradle))
+4. tingodb ([tingodb] (https://github.com/sergeyksv/tingodb))
 5. redis ([redis] (https://github.com/mranney/node_redis))
 
 ## own db implementation

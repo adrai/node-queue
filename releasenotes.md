@@ -1,3 +1,6 @@
+#### v1.0.3
+- replace json-serialize with jsondate
+
 #### v1.0.2
 - cosmetics
 

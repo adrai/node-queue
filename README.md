@@ -37,7 +37,7 @@ Make shure you have installed the required driver, in this example run: 'npm ins
             dbName: 'queuedb',      // optional
             collectionName: 'queue' // optional
             timeout: 10000          // optional
-        }, 
+        },
         function(err, myQueue) {
             if(err) {
                 console.log('ohhh :-(');
@@ -158,7 +158,7 @@ Currently these databases are supported:
 5. redis ([redis] (https://github.com/mranney/node_redis))
 
 ## own db implementation
-You can use your own db implementation by extending this...
+You can use your own db implementation by extending this... (pass the Queue as type in the options)
 
     var Queue = require('node-queue').Queue,
     util = require('util'),
@@ -181,7 +181,7 @@ You can use your own db implementation by extending this...
 
 # License
 
-Copyright (c) 2014 Adriano Raiano
+Copyright (c) 2015 Adriano Raiano
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal

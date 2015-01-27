@@ -71,18 +71,18 @@ describe('Queue', function() {
         }).to.throwError();
 
       });
-      
+
     });
 
     describe('with options of an own db implementation', function() {
 
       it('it should return with the an instance of that implementation', function() {
 
-        var q = queue.createQueue(InMemory);
+        var q = queue.createQueue({ type: InMemory });
         expect(q).to.be.a(InMemory);
 
       });
-      
+
     });
 
     describe('with options containing a type property with the value of', function() {
@@ -107,7 +107,7 @@ describe('Queue', function() {
               q.once('connect', done);
 
             });
-          
+
             it('it should return with the correct queue', function() {
 
               q = queue.createQueue({ type: type });
@@ -130,7 +130,7 @@ describe('Queue', function() {
             afterEach(function(done) {
               q.disconnect(done);
             });
-          
+
             it('it should return with the correct queue', function(done) {
 
               queue.createQueue({ type: type }, function(err, resQ) {
@@ -144,7 +144,7 @@ describe('Queue', function() {
           });
 
           describe('having connected', function() {
-          
+
             describe('calling disconnect', function() {
 
               beforeEach(function(done) {
@@ -167,7 +167,7 @@ describe('Queue', function() {
 
                 q.once('disconnect', done);
                 q.disconnect();
-                
+
               });
 
             });
